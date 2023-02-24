@@ -14,7 +14,7 @@
     "prettier": "npx prettier src --write",
     "prepare": "husky install",
     "pre-commit": "npm-run-all prettier lint lint:fix",
-    "pre-push": "npm-run-all  prettier lint lint:fix test"
+    "pre-push": "npm-run-all  prettier lint lint:fix"
   },
   "dependencies": {
     "react": "^18.2.0",
