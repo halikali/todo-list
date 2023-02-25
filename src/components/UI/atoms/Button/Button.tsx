@@ -9,7 +9,7 @@ interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({ primary = false, size = 'medium', backgroundColor, label, ...props }: ButtonProps) => {
+function Button({ primary = false, size = 'medium', backgroundColor, label, ...props }: ButtonProps) {
   const mode = primary ? 'button--primary' : 'button--secondary'
   return (
     <button
@@ -22,3 +22,5 @@ export const Button = ({ primary = false, size = 'medium', backgroundColor, labe
     </button>
   )
 }
+
+export default Button
