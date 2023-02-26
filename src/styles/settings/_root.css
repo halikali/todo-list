@@ -9,6 +9,18 @@
   --font-size-md: 1.4rem;
   --font-size-lg: 1.6rem;
   --color-black: #000;
+  --color-purple: #8284fa;
+  --color-purple-dark: #5e60ce;
+  --color-blue: #4ea8de;
+  --color-blue-dark: #4ea8de;
+  --color-gray-700: #0d0d0d;
+  --color-gray-600: #1a1a1a;
+  --color-gray-500: #262626;
+  --color-gray-400: #333333;
+  --color-gray-300: #808080;
+  --color-gray-200: #d9d9d9;
+  --color-gray-100: #f2f2f2;
+  --color-danger: #e25858;
 }
 
 @custom-selector :--heading h1, h2, h3, h4, h5, h6;
