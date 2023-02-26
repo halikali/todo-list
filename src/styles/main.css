@@ -1,5 +1,7 @@
-@import './atoms/button.css';
+@import './tools/_normalize.css';
+@import './settings/_root.css';
+@import './settings/_global.css';
+@import './settings/_typography.css';
+@import './settings/_mixins.css';
 
-div {
-  display: flex;
-}
+@import './atoms/button.css';
