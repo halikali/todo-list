@@ -6,9 +6,6 @@ interface ButtonProps {
   onClick?: () => void
 }
 
-/**
- * Primary UI component for user interaction
- */
 function Button({ primary = false, size = 'medium', backgroundColor, label, ...props }: ButtonProps) {
   const mode = primary ? 'button--primary' : 'button--secondary'
   return (
