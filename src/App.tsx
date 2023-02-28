@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
+
 import routes from './core/routes'
 
 function App() {
