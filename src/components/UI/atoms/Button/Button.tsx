@@ -1,22 +1,21 @@
 interface ButtonProps {
-  primary?: boolean
-  backgroundColor?: string
-  size?: 'small' | 'medium' | 'large'
+  mode?: '' | 'with-icon' | 'just-icon'
   label: string
+  size: 'small' | 'medium' | 'large'
+  priority?: '' | 'secondary'
   onClick?: () => void
+  children?: JSX.Element | JSX.Element[]
 }
 
-function Button({ primary = false, size = 'medium', backgroundColor, label, ...props }: ButtonProps) {
-  const mode = primary ? 'button--primary' : 'button--secondary'
-
+function Button({ mode = '', label, size, priority, ...props }: ButtonProps) {
   return (
     <button
       type="button"
-      className={['button', `button--${size}`, mode].join(' ')}
-      style={{ backgroundColor }}
+      className={['button', `button--${mode}`, `button--${size}`, `button--${priority}`].join(' ')}
       {...props}
     >
-      {label}
+      {mode !== 'just-icon' && label}
+      {mode !== '' && props.children && props.children}
     </button>
   )
 }

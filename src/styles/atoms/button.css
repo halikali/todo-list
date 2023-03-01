@@ -1,29 +1,40 @@
 .button {
-  font-weight: 700;
-  border: 0;
-  border-radius: 3em;
+  border-radius: 0.8rem;
+  font: 700 1.4rem/140% var(--font-family);
+  background-color: var(--color-blue-dark);
+  color: var(--color-gray-100);
   cursor: pointer;
-  display: inline-block;
-  line-height: 1;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: var(--color-blue);
+  }
 }
-.button--primary {
-  color: white;
-  background-color: #1ea7fd;
-}
+
 .button--secondary {
-  color: #333;
-  background-color: transparent;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+  background-color: var(--color-gray-200);
+  color: var(--color-blue-dark);
+
+  &:hover {
+    background-color: var(--color-gray-100);
+  }
 }
+
+.button--with-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
 .button--small {
-  font-size: 12px;
-  padding: 10px 16px;
+  padding: 0.8rem;
 }
+
 .button--medium {
-  font-size: 14px;
-  padding: 11px 20px;
+  padding: 1rem;
 }
+
 .button--large {
-  font-size: 16px;
-  padding: 12px 24px;
+  padding: 1.6rem;
 }
