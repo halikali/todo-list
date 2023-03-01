@@ -8,6 +8,7 @@ interface ButtonProps {
 
 function Button({ primary = false, size = 'medium', backgroundColor, label, ...props }: ButtonProps) {
   const mode = primary ? 'button--primary' : 'button--secondary'
+
   return (
     <button
       type="button"

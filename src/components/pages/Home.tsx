@@ -1,5 +1,6 @@
-import Button from 'components/UI/atoms/Button/Button'
 import { useTranslation } from 'react-i18next'
+
+import Button from 'components/UI/atoms/Button/Button'
 
 function Home() {
   const { t } = useTranslation()
@@ -8,7 +9,7 @@ function Home() {
     <div>
       <p>hello world</p>
       <h1>example heading</h1>
-      <Button label={t('general.add')} />
+      <Button label={t('general.add')} primary />
     </div>
   )
 }
