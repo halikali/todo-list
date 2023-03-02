@@ -5,3 +5,4 @@
 @import './settings/_mixins.css';
 
 @import './atoms/button.css';
+@import './atoms/input.css';

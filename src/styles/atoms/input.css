@@ -1,0 +1,36 @@
+.input {
+  background-color: var(--color-gray-500);
+  height: 5.4rem;
+  text-indent: 1.6rem;
+  border-radius: 0.8rem;
+  border: 0.1rem solid var(--color-gray-700);
+  color: #f2f2f2;
+  transition: all 0.2s ease-in-out;
+
+  &::placeholder {
+    color: var(--color-gray-700);
+  }
+}
+
+.input--small {
+  width: 30rem;
+}
+
+.input--medium {
+  width: 50rem;
+}
+
+.input--full {
+  width: 100%;
+}
+
+.input:focus {
+  border-color: var(--color-purple-dark);
+  background-color: var(--color-gray-400);
+}
+
+.input:disabled {
+  background-color: var(--color-gray-600);
+  border-color: var(--color-gray-700);
+  color: var(--color-gray-200);
+}
