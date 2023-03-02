@@ -6,6 +6,5 @@
 
   @media (--tablet) {
     font-size: var(--font-size-lg);
-    color: red;
   }
 }
