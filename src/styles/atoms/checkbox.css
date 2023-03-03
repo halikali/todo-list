@@ -1,0 +1,87 @@
+.checkbox {
+  display: inline-flex;
+  position: relative;
+
+  & input {
+    display: none;
+  }
+
+  .checkbox__icon {
+    position: relative;
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+    border: 0.2rem solid var(--color-blue);
+    border-radius: 50%;
+    user-select: none;
+    transition: all 0.2s ease-in-out;
+    backgroun-repeat: no-repeat;
+
+    &:hover {
+      cursor: pointer;
+      border-color: var(--color-blue-dark);
+    }
+  }
+
+  & input:checked ~ .checkbox__icon {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-color: var(--color-purple-dark);
+    background-color: var(--color-purple-dark);
+
+    &:hover {
+      border-color: var(--color-purple);
+      background-color: var(--color-purple);
+    }
+  }
+}
+
+.checkbox img {
+  display: none;
+}
+
+input:checked ~ img {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 1;
+
+  &:hover ~ .checkbox__icon {
+    border-color: var(--color-purple);
+    background-color: var(--color-purple);
+  }
+}
+
+.checkbox--small {
+  width: 1.7rem;
+  height: 1.7rem;
+}
+
+.checkbox--medium {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.checkbox--large {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.image--small {
+  width: 1rem;
+  height: 1rem;
+}
+
+.image--medium {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.image--large {
+  width: 2rem;
+  height: 2rem;
+}
