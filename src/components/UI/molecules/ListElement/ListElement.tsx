@@ -3,7 +3,7 @@ import Button from 'components/UI/atoms/Button/Button'
 import Checkbox from 'components/UI/atoms/Checkbox/Checkbox'
 
 interface ListElementProps {
-  text: any
+  text: string
   checked: boolean
   onClick?: () => any
 }
