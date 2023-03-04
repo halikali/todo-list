@@ -8,6 +8,7 @@
 @import './atoms/input.css';
 @import './atoms/checkbox.css';
 @import './atoms/badge.css';
+@import './atoms/text.css';
 
 @import './molecules/formInput.css';
 @import './molecules/listElement.css';
