@@ -1,6 +1,6 @@
 interface InputProps {
   type: 'text'
-  placeholder?: string
+  placeholder?: any
   disabled?: boolean
   size: 'small' | 'medium' | 'full'
 }

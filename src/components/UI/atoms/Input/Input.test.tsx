@@ -13,7 +13,7 @@ describe('Input', () => {
   it('renders the correct size', () => {
     render(<Input size="full" type="text" placeholder="Placeholder" />)
     const renderedInput = screen.getByPlaceholderText('Placeholder')
-    expect(renderedInput).toHaveClass('input--large')
+    expect(renderedInput).toHaveClass('input--full')
   })
 
   it('renders the correct type', () => {
