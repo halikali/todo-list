@@ -8,7 +8,7 @@
   transition: all 0.2s ease-in-out;
 
   &::placeholder {
-    color: var(--color-gray-700);
+    color: var(--color-gray-300);
   }
 }
 
