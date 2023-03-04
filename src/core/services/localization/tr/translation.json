@@ -1,5 +1,8 @@
 {
   "general": {
     "add": "Ekle"
+  },
+  "todo": {
+    "command": "Yeni bir görev ekle"
   }
 }
