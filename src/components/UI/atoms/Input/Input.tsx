@@ -2,7 +2,7 @@ interface InputProps {
   type: 'text'
   placeholder?: string
   disabled?: boolean
-  size: 'small' | 'medium' | 'large'
+  size: 'small' | 'medium' | 'full'
 }
 
 function Input({ type, placeholder, disabled, size, ...props }: InputProps) {
