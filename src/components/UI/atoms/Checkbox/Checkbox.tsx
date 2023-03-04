@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { TickIcon } from '../../../../assets'
 
 interface CheckboxProps {
@@ -6,9 +7,11 @@ interface CheckboxProps {
 }
 
 function Checkbox({ checked, size, ...props }: CheckboxProps) {
+  const [isChecked, setIsChecked] = useState(checked)
+
   return (
     <label className={['checkbox', `checkbox--${size}`].join(' ')} {...props}>
-      <input type="checkbox" checked={checked} />
+      <input type="checkbox" checked={isChecked} onChange={() => setIsChecked(!isChecked)} />
       <img src={TickIcon} alt="tick icon" className={`image--${size}`} />
       <span className="checkbox__icon" />
     </label>
