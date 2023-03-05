@@ -5,15 +5,17 @@ import Checkbox from 'components/UI/atoms/Checkbox/Checkbox'
 interface ListElementProps {
   text: string
   checked: boolean
+  id: number
   onClick?: () => any
+  deleteFunc?: (id: number) => any
 }
 
-function ListElement({ text, checked, ...props }: ListElementProps) {
+function ListElement({ text, checked, deleteFunc, id, ...props }: ListElementProps) {
   return (
     <div className="list-element" {...props}>
       <Checkbox size="small" checked={checked} />
       <p className={['list-element__text', `${checked ? 'text-faded' : ''}`].join(' ')}>{text}</p>
-      <Button size="small" mode="just-icon" priority="secondary">
+      <Button size="small" mode="just-icon" priority="secondary" onClick={() => deleteFunc && deleteFunc(id)}>
         <img src={TrashIcon} alt="trash icon" />
       </Button>
     </div>
