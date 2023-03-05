@@ -1,6 +1,6 @@
 interface ButtonProps {
   mode?: '' | 'with-icon' | 'just-icon'
-  label?: string
+  label?: any
   size: 'small' | 'medium' | 'large'
   priority?: '' | 'secondary'
   onClick?: () => void
