@@ -1,0 +1,28 @@
+.home-page {
+  display: flex;
+  justify-content: center;
+  min-height: 100%;
+  background-color: var(--color-black-light);
+
+  .container {
+    height: 100%;
+    width: 100%;
+
+    @media (--tablet) {
+      width: 73.6rem;
+    }
+
+    .brand-logo {
+      display: flex;
+      margin: 7.2rem auto 5.3rem auto;
+    }
+
+    .form-input-wrapper {
+      margin-bottom: 6.5rem;
+    }
+
+    .todo-list {
+      margin-top: 2.4rem;
+    }
+  }
+}

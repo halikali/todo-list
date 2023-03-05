@@ -12,7 +12,7 @@
 }
 
 .button--secondary {
-  background-color: var(--color-gray-200);
+  background-color: transparent;
   color: var(--color-blue-dark);
 
   &:hover {

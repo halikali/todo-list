@@ -1,0 +1,18 @@
+.empty-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--color-black-light);
+  padding: 6.4rem 0rem;
+  border-top: 0.1rem solid var(--color-gray-400);
+  margin-top: 2.4rem;
+
+  @media (--tablet) {
+    padding: 6.4rem 2.4rem;
+  }
+
+  & img {
+    margin-bottom: 1.6rem;
+  }
+}

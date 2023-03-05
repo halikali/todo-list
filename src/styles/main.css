@@ -12,3 +12,9 @@
 
 @import './molecules/formInput.css';
 @import './molecules/listElement.css';
+@import './molecules/badgeInfo.css';
+@import './molecules/emptyPage.css';
+
+@import './organisms/listHeader.css';
+
+@import './pages/homePage.css';
