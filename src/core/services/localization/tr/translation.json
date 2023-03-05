@@ -3,6 +3,11 @@
     "add": "Ekle"
   },
   "todo": {
-    "command": "Yeni bir görev ekle"
+    "command": "Yeni bir görev ekle",
+    "countInfo": "Oluşturulan görevler",
+    "completedInfo": "Tamamlanmış görevler",
+    "completedCount": "{{active}}/{{count}}",
+    "emptyMessage": "Henüz kayıtlı göreviniz yok",
+    "emptyOrderMessage": "Görevler oluşturun ve yapılacak işlerinizi düzenleyin"
   }
 }

@@ -1,5 +1,13 @@
 {
   "general": {
     "add": "Add"
+  },
+  "todo": {
+    "command": "Add a new task",
+    "countInfo": "Created tasks",
+    "completedInfo": "completed missions",
+    "completedCount": "{{active}} in {{count}}",
+    "emptyMessage": "You don't have any saved tasks yet",
+    "emptyOrderMessage": "Create tasks and organize your to-dos"
   }
 }
