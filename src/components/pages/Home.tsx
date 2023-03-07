@@ -28,7 +28,9 @@ function Home() {
     setDummyData(dummyData.filter((item) => item.id !== id))
   }
 
-  const addTodo = (value: any): void => {
+  const addTodo = (value: string) => {
+    if (value.trim() === '') return false
+
     setDummyData([
       ...dummyData,
       {
@@ -37,6 +39,8 @@ function Home() {
         completed: false,
       },
     ])
+
+    return true
   }
 
   return (
