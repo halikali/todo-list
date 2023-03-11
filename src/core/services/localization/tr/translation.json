@@ -9,5 +9,15 @@
     "completedCount": "{{active}}/{{count}}",
     "emptyMessage": "Henüz kayıtlı göreviniz yok",
     "emptyOrderMessage": "Görevler oluşturun ve yapılacak işlerinizi düzenleyin"
+  },
+  "auth": {
+    "login": "Giriş yap",
+    "logout": "Çıkış yap",
+    "register": "Kayıt ol",
+    "registerMessage": "Hesabınız yok mu?",
+    "loginMessage": "Hesabınız var mı?",
+    "email": "E-posta",
+    "password": "Şifre",
+    "username": "Kullanıcı adı"
   }
 }

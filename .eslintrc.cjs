@@ -34,5 +34,8 @@ module.exports = {
     'no-param-reassign': 0,
     'react/function-component-definition': 0,
     'jsx-a11y/label-has-associated-control': 0,
+    ' @typescript-eslint/no-explicit-any': 0,
+    'react/jsx-no-bind': 0,
+    'consistent-return': 0,
   },
 }

@@ -1,11 +1,11 @@
 import { useRef } from 'react'
 
 interface InputProps {
-  type: 'text'
+  type: 'text' | 'password' | 'email'
   placeholder?: any
   disabled?: boolean
   size: 'small' | 'medium' | 'full'
-  changeFunc?: () => any
+  changeFunc?: (value: any) => any
 }
 
 function Input({ type, placeholder, disabled, size, changeFunc, ...props }: InputProps) {
