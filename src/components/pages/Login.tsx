@@ -7,7 +7,7 @@ import Button from 'components/UI/atoms/Button/Button'
 import Input from 'components/UI/atoms/Input/Input'
 
 function Login() {
-  const [dummyData, setDummyData] = useState({
+  const [dummyData] = useState({
     username: 'test',
     password: 'test123',
   })
