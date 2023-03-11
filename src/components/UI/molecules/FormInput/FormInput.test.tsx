@@ -6,7 +6,7 @@ import FormInput from './FormInput'
 
 describe('FormInput', () => {
   it('renders a form input', () => {
-    render(<FormInput />)
+    render(<FormInput addFunc={() => {}} />)
     const textbox = screen.getByRole('textbox')
     const button = screen.getByRole('button')
 

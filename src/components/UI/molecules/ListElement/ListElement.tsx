@@ -5,7 +5,7 @@ import Checkbox from 'components/UI/atoms/Checkbox/Checkbox'
 interface ListElementProps {
   text: string
   checked: boolean
-  id: number
+  id: number | string
   onClick?: () => any
   deleteFunc?: (id: number) => any
 }
