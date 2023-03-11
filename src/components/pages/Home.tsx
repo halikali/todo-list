@@ -28,7 +28,7 @@ function Home() {
     },
   ])
 
-  const deleteTodo = (id: number) => {
+  const deleteTodo = (id: number | string) => {
     setDummyData(dummyData.filter((item) => item.id !== id))
   }
 

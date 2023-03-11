@@ -7,7 +7,7 @@ interface ListElementProps {
   checked: boolean
   id: number | string
   onClick?: () => any
-  deleteFunc?: (id: number) => any
+  deleteFunc?: (id: number | string) => any
 }
 
 function ListElement({ text, checked, deleteFunc, id, ...props }: ListElementProps) {
