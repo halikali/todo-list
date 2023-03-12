@@ -4,13 +4,13 @@ import Checkbox from './Checkbox'
 
 describe('Checkbox', () => {
   it('renders a checkbox', () => {
-    render(<Checkbox size="large" />)
+    render(<Checkbox id="1" changeFunc={() => {}} size="large" />)
     const renderedCheckbox = screen.getByRole('checkbox')
     expect(renderedCheckbox).toBeInTheDocument()
   })
 
   it('render the checked state', () => {
-    render(<Checkbox size="large" checked />)
+    render(<Checkbox id="1" changeFunc={() => {}} size="large" checked />)
     const renderedCheckbox = screen.getByRole('checkbox')
     expect(renderedCheckbox).toBeChecked()
   })
