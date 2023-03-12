@@ -6,6 +6,7 @@
   .container {
     height: 100%;
     width: 100%;
+    padding: 1rem;
 
     @media (--tablet) {
       width: 73.6rem;
@@ -22,6 +23,11 @@
 
     .todo-list {
       margin-top: 2.4rem;
+    }
+
+    .logout-btn {
+      display: flex;
+      justify-content: flex-end;
     }
   }
 }

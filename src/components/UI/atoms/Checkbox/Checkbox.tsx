@@ -4,14 +4,23 @@ import { TickIcon } from '../../../../assets'
 interface CheckboxProps {
   checked?: boolean
   size: 'small' | 'medium' | 'large'
+  id: number | string
+  changeFunc: (id: number | string) => any
 }
 
-function Checkbox({ checked, size, ...props }: CheckboxProps) {
+function Checkbox({ checked, size, changeFunc, id, ...props }: CheckboxProps) {
   const [isChecked, setIsChecked] = useState(checked)
 
   return (
     <label className={['checkbox', `checkbox--${size}`].join(' ')} {...props}>
-      <input type="checkbox" checked={isChecked} onChange={() => setIsChecked(!isChecked)} />
+      <input
+        type="checkbox"
+        checked={isChecked}
+        onChange={() => {
+          setIsChecked(!isChecked)
+          changeFunc(id)
+        }}
+      />
       <img src={TickIcon} alt="tick icon" className={`image--${size}`} />
       <span className="checkbox__icon" />
     </label>

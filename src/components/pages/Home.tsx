@@ -47,10 +47,24 @@ function Home() {
     return true
   }
 
+  const toggleTodo = (id: number | string) => {
+    setDummyData(
+      dummyData.map((item) => {
+        if (item.id === id) {
+          return {
+            ...item,
+            completed: !item.completed,
+          }
+        }
+        return item
+      })
+    )
+  }
+
   return (
     <div className="home-page">
       <div className="container">
-        <Link to="/login">
+        <Link to="/login" className="logout-btn">
           <Button size="medium" label={t('auth.logout')} />
         </Link>
         <img src={BrandLogo} alt="brand logo" className="brand-logo" />
@@ -63,7 +77,13 @@ function Home() {
           <ul className="todo-list">
             {dummyData.map((todo) => (
               <li key={todo.id}>
-                <ListElement checked={todo.completed} text={todo.title} deleteFunc={deleteTodo} id={todo.id} />
+                <ListElement
+                  checked={todo.completed}
+                  text={todo.title}
+                  deleteFunc={deleteTodo}
+                  id={todo.id}
+                  changeFunc={toggleTodo}
+                />
               </li>
             ))}
           </ul>
