@@ -18,9 +18,22 @@
   flex: 1;
   color: var(--color-gray-100);
   font: 400 1.4rem/140% var(--font-family);
+  transition: color 0.3s;
 
   &.text-faded {
     color: var(--color-gray-300);
     text-decoration: line-through;
+    transition: all 0.3s;
+    text-decoration: line-through;
+    animation: text-fade 0.2s linear;
+  }
+}
+
+@keyframes text-fade {
+  from {
+    text-decoration-color: transparent;
+  }
+  to {
+    text-decoration-color: var(--color-gray-300);
   }
 }
