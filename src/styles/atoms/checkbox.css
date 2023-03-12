@@ -15,7 +15,7 @@
     border-radius: 50%;
     user-select: none;
     transition: all 0.2s ease-in-out;
-    backgroun-repeat: no-repeat;
+    background-repeat: no-repeat;
 
     &:hover {
       cursor: pointer;
