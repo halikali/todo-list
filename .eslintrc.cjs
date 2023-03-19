@@ -37,5 +37,6 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 0,
     'react/jsx-no-bind': 0,
     'consistent-return': 0,
+    'no-underscore-dangle': 0,
   },
 }

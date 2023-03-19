@@ -5,7 +5,7 @@ interface CheckboxProps {
   checked?: boolean
   size: 'small' | 'medium' | 'large'
   id: number | string
-  changeFunc: (id: number | string) => any
+  changeFunc: (id: any) => any
 }
 
 function Checkbox({ checked, size, changeFunc, id, ...props }: CheckboxProps) {
