@@ -1,6 +1,7 @@
 import { t } from 'i18next'
 import { Link } from 'react-router-dom'
 import { useEffect, useRef, useState } from 'react'
+import { getCookie, removeCookie } from 'typescript-cookie'
 
 import Button from 'components/UI/atoms/Button/Button'
 import { BrandLogo } from 'assets'
@@ -10,7 +11,6 @@ import ListElement from 'components/UI/molecules/ListElement/ListElement'
 import ListHeader from 'components/UI/organisms/LiatHeader/ListHeader'
 import TodoService from 'core/services/Todo/TodoService'
 import { TodoType } from 'types/routeTyes'
-import { getCookie, removeCookie } from 'typescript-cookie'
 
 function Home() {
   const [todos, setTodos] = useState<TodoType[]>([])
