@@ -2,6 +2,7 @@ type RouteType = {
   path: string
   component: any
   name: string
+  isProtected: boolean
 }
 
 export type TodoType = {

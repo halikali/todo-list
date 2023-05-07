@@ -19,5 +19,9 @@
     "email": "E-posta",
     "password": "Şifre",
     "username": "Kullanıcı adı"
+  },
+  "lang": {
+    "tr": "Türkçe",
+    "en": "English"
   }
 }

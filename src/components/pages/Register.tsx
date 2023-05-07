@@ -1,6 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom'
 import { t } from 'i18next'
 import { useState } from 'react'
+import { setCookie } from 'typescript-cookie'
 
 import { BrandLogo } from 'assets'
 import Button from 'components/UI/atoms/Button/Button'
@@ -41,7 +42,10 @@ function Register() {
     if (!form.email || !form.password || !form.name) return false
     const registeredUser = await UserService.Register(form.email, form.password, form.name)
 
-    if (registeredUser) navigate('/')
+    setCookie('token', registeredUser.token)
+    setCookie('uid', registeredUser.createdUser._id)
+
+    if (registeredUser.token) navigate('/')
   }
 
   return (

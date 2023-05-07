@@ -1,6 +1,6 @@
 import { t } from 'i18next'
 import { Link } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import Button from 'components/UI/atoms/Button/Button'
 import { BrandLogo } from 'assets'
@@ -10,9 +10,11 @@ import ListElement from 'components/UI/molecules/ListElement/ListElement'
 import ListHeader from 'components/UI/organisms/LiatHeader/ListHeader'
 import TodoService from 'core/services/Todo/TodoService'
 import { TodoType } from 'types/routeTyes'
+import { getCookie, removeCookie } from 'typescript-cookie'
 
 function Home() {
   const [todos, setTodos] = useState<TodoType[]>([])
+  const userId: any = useRef('')
 
   const deleteTodo = (id: number | string) => {
     setTodos(todos.filter((item: TodoType) => item._id !== id))
@@ -20,7 +22,7 @@ function Home() {
 
   const addTodo = async (value: string) => {
     if (value.trim() === '') return false
-    const response = TodoService.AddTodo(value, '6414fd9a7478345baa109fc2')
+    const response = TodoService.AddTodo(value, userId.current)
     const { createdTodo } = await response
 
     setTodos([...todos, createdTodo])
@@ -43,20 +45,28 @@ function Home() {
     )
   }
 
-  const getTodos = async (userId: string) => {
-    const { findedTodos } = await TodoService.GetTodos(userId)
+  const getTodos = async () => {
+    const { findedTodos } = await TodoService.GetTodos(userId.current)
     setTodos(findedTodos)
   }
 
   useEffect(() => {
-    getTodos('6414fd9a7478345baa109fc2')
+    userId.current = getCookie('uid')
+    getTodos()
   }, [])
 
   return (
     <div className="home-page">
       <div className="container">
         <Link to="/login" className="logout-btn">
-          <Button size="medium" label={t('auth.logout')} />
+          <Button
+            size="medium"
+            label={t('auth.logout')}
+            onClick={() => {
+              removeCookie('uid')
+              removeCookie('token')
+            }}
+          />
         </Link>
         <img src={BrandLogo} alt="brand logo" className="brand-logo" />
         <div className="form-input-wrapper">

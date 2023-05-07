@@ -9,5 +9,19 @@
     "completedCount": "{{active}} in {{count}}",
     "emptyMessage": "You don't have any saved tasks yet",
     "emptyOrderMessage": "Create tasks and organize your to-dos"
+  },
+  "auth": {
+    "login": "Login",
+    "logout": "Logout",
+    "register": "Register",
+    "registerMessage": "Don't have an account ?",
+    "loginMessage": "Do you have an account ?",
+    "email": "E-posta",
+    "password": "Password",
+    "username": "Username"
+  },
+  "lang": {
+    "tr": "Türkçe",
+    "en": "English"
   }
 }

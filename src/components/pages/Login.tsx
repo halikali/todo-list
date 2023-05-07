@@ -1,6 +1,7 @@
 import { t } from 'i18next'
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import { setCookie } from 'typescript-cookie'
 
 import { BrandLogo } from 'assets'
 import Button from 'components/UI/atoms/Button/Button'
@@ -19,7 +20,10 @@ function Login() {
     if (!form.email || !form.password) return false
     const loggedUser = await UserService.Login(form.email, form.password)
 
-    if (loggedUser) navigate('/')
+    setCookie('token', loggedUser.token)
+    setCookie('uid', loggedUser.user._id)
+
+    if (loggedUser.token) navigate('/')
   }
 
   const handleUserChange = (value: string) => {
