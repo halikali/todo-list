@@ -30,4 +30,16 @@
       justify-content: flex-end;
     }
   }
+
+  .button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .lang-changer {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
 }

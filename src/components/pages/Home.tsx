@@ -1,7 +1,7 @@
-import { t } from 'i18next'
 import { Link } from 'react-router-dom'
 import { useEffect, useRef, useState } from 'react'
 import { getCookie, removeCookie } from 'typescript-cookie'
+import { useTranslation } from 'react-i18next'
 
 import Button from 'components/UI/atoms/Button/Button'
 import { BrandLogo } from 'assets'
@@ -13,6 +13,7 @@ import TodoService from 'core/services/Todo/TodoService'
 import { TodoType } from 'types/routeTyes'
 
 function Home() {
+  const { t, i18n } = useTranslation()
   const [todos, setTodos] = useState<TodoType[]>([])
   const userId: any = useRef('')
 
@@ -50,6 +51,10 @@ function Home() {
     setTodos(findedTodos)
   }
 
+  const changeLang = (lang: 'tr' | 'en') => {
+    i18n.changeLanguage(lang)
+  }
+
   useEffect(() => {
     userId.current = getCookie('uid')
     getTodos()
@@ -58,16 +63,22 @@ function Home() {
   return (
     <div className="home-page">
       <div className="container">
-        <Link to="/login" className="logout-btn">
-          <Button
-            size="medium"
-            label={t('auth.logout')}
-            onClick={() => {
-              removeCookie('uid')
-              removeCookie('token')
-            }}
-          />
-        </Link>
+        <div className="button-wrapper">
+          <Link to="/login" className="logout-btn">
+            <Button
+              size="medium"
+              label={t('auth.logout')}
+              onClick={() => {
+                removeCookie('uid')
+                removeCookie('token')
+              }}
+            />
+          </Link>
+          <div className="lang-changer">
+            <Button size="small" label="TR" onClick={() => changeLang('tr')} />
+            <Button size="small" label="EN" onClick={() => changeLang('en')} />
+          </div>
+        </div>
         <img src={BrandLogo} alt="brand logo" className="brand-logo" />
         <div className="form-input-wrapper">
           <FormInput addFunc={addTodo} />
